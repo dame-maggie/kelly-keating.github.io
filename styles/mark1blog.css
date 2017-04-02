@@ -1,5 +1,5 @@
 body{
-  background-color: #dddddd;
+  background-color: cadetBlue;
   color: black;
 }
 h1 {
@@ -24,14 +24,27 @@ h4{
   text-align: center;
   color: cadetBlue;
 }
+
 ul {
   list-style-type: circle;
 }
 
-.container {
-  background-color: cadetBlue;
+
+.text{
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 60px;
+  background-color: #9fc4c6;
+  font-family: 'Arial', sans-serif;
+  color: #333333;
 }
 
-.nav-button{
+#box-model {
   display: inline-block;
+}
+#box-model img{
+    float: left;
+    padding-right: 20px;
+    display: inline;
 }
