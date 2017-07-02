@@ -2,7 +2,8 @@ import React from 'react'
 
 const Title = () => (
   <div>
-    Kelly Keating
+    <img src='images/bulldozer.png' />
+    <h1>Kelly Keating</h1>
   </div>
 )
 
