@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Projects = () => (
-  <div className='container-fluid'>
+  <div className='projects-container'>
     Projects go here
   </div>
 )
