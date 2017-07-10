@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Nav = () => (
-  <div>
+  <div className='nav-container'>
     Navnavnav
   </div>
 )
