@@ -1,15 +1,34 @@
-# kelly-keating.herokuapp.com
-### My homepage
 
-  `npm install`
+# kelly-keating.github.io
 
-  `npm run dev` for bundling, watch and nodemon
+my cool website
 
-  `npm start` only runs server (setup for heroku)
+## how
 
+### install
 
+```
+git clone https://github.com/kelly-keating/kelly-keating.github.io
+cd 
+npm install
+```
 
+## develop
 
-### Deploying!
+```
+npm start
+```
 
-`npm run h:deploy` will push your local master branch to your heroku app, but remove bundle* from the .gitignore first
+browse to <http://localhost:9966/>.
+
+## test
+
+```
+npm test
+```
+
+## deploy
+
+```
+npm run deploy
+```
