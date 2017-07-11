@@ -1,6 +1,12 @@
+*{
+  width: 90vw;
+  position: relative;
+}
+
 body{
   background-color: #dddddd;
   color: black;
+  width: 100%;
 }
 
 h1 {
@@ -10,6 +16,12 @@ h1 {
   color: #f2f2f2;
 }
 
+#app{
+  position: absolute;
+  left: -10px;
+  top: -10px;
+}
+
 .app-container {
   background-color: cadetBlue;
 }
@@ -17,18 +29,23 @@ h1 {
 .nav-container {
   position: fixed;
   height: 20px;
+  width: 90vw;
   background-color: darkGrey;
 }
 
 .title-container {
+  top: 0vh;
+  display: block;
   height: 100vh;
   background-color: blue;
 }
 
 .projects-container {
   height: 100vh;
+  display: block;
 }
 
 .footer-container {
   height: 100vh;
+  display: block;
 }
