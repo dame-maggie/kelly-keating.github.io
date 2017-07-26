@@ -12502,7 +12502,7 @@ var Title = function Title() {
   return _react2.default.createElement(
     'div',
     { className: 'title-container' },
-    _react2.default.createElement('img', { src: 'images/bulldozer.png' }),
+    _react2.default.createElement('img', { src: 'http://i.imgur.com/NjcGgJi.jpg', className: 'title-img' }),
     _react2.default.createElement(
       'h1',
       null,

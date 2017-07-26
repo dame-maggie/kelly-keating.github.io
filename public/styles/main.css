@@ -40,6 +40,10 @@ h1 {
   background-color: blue;
 }
 
+.title-img {
+  width: 300px;
+}
+
 .projects-container {
   height: 100vh;
   display: block;
