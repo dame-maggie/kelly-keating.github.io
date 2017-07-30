@@ -49,6 +49,10 @@ h1 {
   display: block;
 }
 
+.proj-img {
+  width: 300px;
+}
+
 .footer-container {
   height: 100vh;
   display: block;
