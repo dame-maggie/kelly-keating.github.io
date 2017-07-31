@@ -12297,6 +12297,7 @@ var App = function App() {
       _react2.default.createElement(_Nav2.default, null),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Title2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Projects2.default }),
+      'My skills',
       _react2.default.createElement(_Footer2.default, null)
     )
   );
@@ -12402,7 +12403,7 @@ var Footer = function Footer() {
   return _react2.default.createElement(
     'div',
     { className: 'footer-container' },
-    'LinkyLinks'
+    'LinkyLinks as a tags Github LinkedIn Email? Anything else? (look up other sites)'
   );
 };
 

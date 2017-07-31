@@ -1,16 +1,21 @@
-*{
+* {
   position: relative;
 }
 
-body{
+body {
+  font-family: 'Reenie Beanie', cursive;
   background-color: #040404;
   color: #dddddd;
 }
 
+a, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
 h1 {
-  font-family: 'Reenie Beanie', cursive;
-  font-size: 80px;
   text-align: center;
+  font-size: 80px;
   color: #f2f2f2;
 }
 
@@ -26,6 +31,8 @@ h1 {
   background-color: #121718;
 }
 
+/* OVERLAY */
+
 .nav-container {
   position: fixed;
   z-index: 99;
@@ -33,21 +40,30 @@ h1 {
   width: 100%;
   top: 0px;
   margin-left: -5%;
+  background-color: #000000;
+}
+
+.nav-butt {
+  display: inline-block;
+  width: 100px;
+  height: 5vh;
+  padding: 2vh 1.5vw 0vh 1.5vw;
+  text-align: center;
+  font-size: 2em;
   background-color: blue;
-  color: #000000;
+  color: #f2f2f2;
 }
 
 .footer-container {
-  height: 100vh;
   display: block;
+  height: 100vh;
 }
 
-
-/* Home Title */
+/* TITLE */
 
 .title-container {
-  top: 0vh;
   display: block;
+  top: 0vh;
   height: 100vh;
   background-color: #000000;
 }
@@ -56,18 +72,16 @@ h1 {
   width: 300px;
 }
 
-
-/* Projects */
+/* PROJECTS */
 
 .projects-container {
-  height: 100vh;
   display: block;
-}
-
-.project-tile {
-
 }
 
 .proj-img {
   width: 300px;
+}
+
+.project-tile {
+
 }
