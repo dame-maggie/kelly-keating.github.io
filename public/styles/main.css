@@ -1,55 +1,93 @@
-*{
-  width: 90vw;
+* {
   position: relative;
 }
 
-body{
-  background-color: #dddddd;
-  color: black;
-  width: 100%;
+body {
+  font-family: 'Reenie Beanie', cursive;
+  background-color: #040404;
+  color: #dddddd;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
 h1 {
-  font-family: 'Helvetica', sans-serif;
-  font-size: 80px;
   text-align: center;
+  font-size: 100px;
   color: #f2f2f2;
 }
 
-#app{
+#app {
   position: absolute;
-  left: -10px;
-  top: -10px;
+  top: 0px;
+  left: 50%;
+  margin-left: -45%;
+  width: 90%;
 }
 
 .app-container {
-  background-color: cadetBlue;
+  background-color: #121718;
 }
+
+/* OVERLAY */
 
 .nav-container {
   position: fixed;
-  height: 20px;
-  width: 90vw;
-  background-color: darkGrey;
+  z-index: 99;
+  height: 7%;
+  width: 100%;
+  top: 0px;
+  margin-left: -5%;
+  background-color: #000000;
 }
 
-.title-container {
-  top: 0vh;
+#nav-logo {
+  display: inline-flex;
+  height: 7vh;
+  border-radius: 50%;
+}
+
+.nav-butt {
+  display: inline-block;
+  width: 100px;
+  height: 5vh;
+  padding: 2vh 1.5vw 0vh 1.5vw;
+  text-align: center;
+  font-size: 2em;
+  background-color: blue;
+  color: #f2f2f2;
+}
+
+.footer-container {
   display: block;
   height: 100vh;
-  background-color: blue;
+}
+
+/* TITLE */
+
+.title-container {
+  display: block;
+  top: 0vh;
+  height: 100vh;
+  background-color: #000000;
 }
 
 .title-img {
   width: 300px;
 }
 
+/* PROJECTS */
+
 .projects-container {
-  height: 100vh;
   display: block;
 }
 
-.footer-container {
-  height: 100vh;
-  display: block;
+.proj-img {
+  width: 300px;
+}
+
+.project-tile {
+
 }
