@@ -5,10 +5,10 @@ import projData from '../../public/data/projects'
 
 const Projects = () => (
   <div className='projects-container'>
-    Projects go here
+    <h2>Projects</h2>
     {renderProjTiles()}
   </div>
-)
+) //projects page ? list : tiles
 
 const renderProjTiles = () => (
   projData.map((proj) => (

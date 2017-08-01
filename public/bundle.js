@@ -12297,7 +12297,7 @@ var App = function App() {
       _react2.default.createElement(_Nav2.default, null),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Title2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Projects2.default }),
-      'My skills',
+      _react2.default.createElement(_reactRouterDom.Route, { path: '/projects', component: _Projects2.default }),
       _react2.default.createElement(_Footer2.default, null)
     )
   );
@@ -12477,8 +12477,11 @@ var ProjectTile = function ProjectTile(proj) {
     'div',
     { className: 'project-tile' },
     _react2.default.createElement('img', { src: proj.image, className: 'proj-img' }),
-    'This is a project.',
-    proj.name,
+    _react2.default.createElement(
+      'h3',
+      null,
+      proj.name
+    ),
     proj.blurb
   );
 };
@@ -12514,10 +12517,14 @@ var Projects = function Projects() {
   return _react2.default.createElement(
     'div',
     { className: 'projects-container' },
-    'Projects go here',
+    _react2.default.createElement(
+      'h2',
+      null,
+      'Projects'
+    ),
     renderProjTiles()
   );
-};
+}; //projects page ? list : tiles
 
 var renderProjTiles = function renderProjTiles() {
   return _projects2.default.map(function (proj) {
@@ -12553,7 +12560,8 @@ var Title = function Title() {
       'h1',
       null,
       'Kelly Keating'
-    )
+    ),
+    '// My skills'
   );
 };
 
