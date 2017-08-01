@@ -15,7 +15,7 @@ a, a:visited {
 
 h1 {
   text-align: center;
-  font-size: 80px;
+  font-size: 100px;
   color: #f2f2f2;
 }
 
@@ -41,6 +41,12 @@ h1 {
   top: 0px;
   margin-left: -5%;
   background-color: #000000;
+}
+
+#nav-logo {
+  display: inline-flex;
+  height: 7vh;
+  border-radius: 50%;
 }
 
 .nav-butt {

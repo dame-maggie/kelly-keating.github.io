@@ -12403,7 +12403,16 @@ var Footer = function Footer() {
   return _react2.default.createElement(
     'div',
     { className: 'footer-container' },
-    'LinkyLinks as a tags Github LinkedIn Email? Anything else? (look up other sites)'
+    _react2.default.createElement(
+      'p',
+      null,
+      'LinkyLinks as a tags'
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      'Github LinkedIn Email? Anything else? (look up other sites)'
+    )
   );
 };
 
@@ -12432,6 +12441,12 @@ var Nav = function Nav() {
   return _react2.default.createElement(
     'div',
     { className: 'nav-container' },
+    _react2.default.createElement(
+      _reactRouterDom.Link,
+      { to: '/' },
+      _react2.default.createElement('img', { id: 'nav-logo', src: 'http://i.imgur.com/2WYjdQt.jpg' }),
+      'Kelly Keating'
+    ),
     _react2.default.createElement(
       _reactRouterDom.Link,
       { to: '/projects' },
