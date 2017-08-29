@@ -12442,27 +12442,35 @@ var Nav = function Nav() {
     'div',
     { className: 'nav-container' },
     _react2.default.createElement(
+      'div',
+      { id: 'nav-title' },
+      'Kelly Keating   \\\\ Web Developer'
+    ),
+    _react2.default.createElement(
       _reactRouterDom.Link,
       { to: '/' },
-      _react2.default.createElement('img', { id: 'nav-logo', src: 'http://i.imgur.com/2WYjdQt.jpg' }),
-      'Kelly Keating'
+      _react2.default.createElement('img', { id: 'nav-logo', src: 'http://i.imgur.com/2WYjdQt.jpg' })
     ),
     _react2.default.createElement(
-      _reactRouterDom.Link,
-      { to: '/projects' },
+      'div',
+      { id: 'nav-buttons' },
       _react2.default.createElement(
-        'div',
-        { className: 'nav-butt' },
-        'Projects'
-      )
-    ),
-    _react2.default.createElement(
-      _reactRouterDom.Link,
-      { to: '/about' },
+        _reactRouterDom.Link,
+        { to: '/projects' },
+        _react2.default.createElement(
+          'div',
+          { className: 'nav-butt' },
+          'Projects'
+        )
+      ),
       _react2.default.createElement(
-        'div',
-        { className: 'nav-butt' },
-        'About'
+        _reactRouterDom.Link,
+        { to: '/about' },
+        _react2.default.createElement(
+          'div',
+          { className: 'nav-butt' },
+          'About'
+        )
       )
     )
   );
@@ -12576,6 +12584,11 @@ var Title = function Title() {
       null,
       'Kelly Keating'
     ),
+    _react2.default.createElement(
+      'h1',
+      null,
+      '(Currently under construction)'
+    ),
     '// My skills'
   );
 };
@@ -12633,7 +12646,7 @@ document.addEventListener('DOMContentLoaded', function () {
 "use strict";
 
 
-module.exports = [{ name: 'The Gitmaster', blurb: 'We made a game.', image: 'http://i.imgur.com/2WYjdQt.jpg' }, { name: 'EDA cheatsheet', blurb: 'Toggle!', image: 'http://i.imgur.com/2WYjdQt.jpg' }, { name: 'CLOCK', blurb: 'Tells the time.', image: 'http://i.imgur.com/2WYjdQt.jpg' }];
+module.exports = [{ name: 'The Gitmaster', blurb: 'We made a game.', image: 'http://i.imgur.com/2WYjdQt.jpg' }, { name: 'EDA cheatsheet', blurb: 'Toggle!', image: 'http://i.imgur.com/2WYjdQt.jpg' }, { name: 'CLOCK', blurb: 'Tells the time.', image: 'http://i.imgur.com/2WYjdQt.jpg' }, { name: 'Jukebox', blurb: 'Can search and create playlists.', image: 'http://i.imgur.com/2WYjdQt.jpg' }, { name: 'KanyeRest', blurb: 'Simple use of a RESTful API.', image: 'http://i.imgur.com/2WYjdQt.jpg' }, { name: 'Calculator', blurb: 'Numbery buttons.', image: 'http://i.imgur.com/2WYjdQt.jpg' }, { name: 'Minesweeper', blurb: 'Simple game.', image: 'http://i.imgur.com/2WYjdQt.jpg' }, { name: 'Tic Tac Toe', blurb: 'Classic.', image: 'http://i.imgur.com/2WYjdQt.jpg' }];
 
 /***/ }),
 /* 121 */

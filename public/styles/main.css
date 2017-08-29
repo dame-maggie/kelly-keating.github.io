@@ -3,8 +3,7 @@
 }
 
 body {
-  font-family: 'Reenie Beanie', cursive;
-  background-color: #040404;
+  background-color: #2A7070;
   color: #dddddd;
 }
 
@@ -36,28 +35,33 @@ h1 {
 .nav-container {
   position: fixed;
   z-index: 99;
-  height: 7%;
+  height: 70px;
   width: 100%;
   top: 0px;
   margin-left: -5%;
   background-color: #000000;
 }
 
+#nav-title {
+  position: fixed;
+  left: 100px;
+}
+
 #nav-logo {
-  display: inline-flex;
-  height: 7vh;
+  position: fixed;
+  left: 50%;
+  margin-left: -40px;
+  height: 80px;
   border-radius: 50%;
 }
 
+#nav-buttons {
+  position: fixed;
+  right: 100px;
+}
+
 .nav-butt {
-  display: inline-block;
-  width: 100px;
-  height: 5vh;
-  padding: 2vh 1.5vw 0vh 1.5vw;
-  text-align: center;
-  font-size: 2em;
-  background-color: blue;
-  color: #f2f2f2;
+
 }
 
 .footer-container {
