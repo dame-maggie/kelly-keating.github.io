@@ -1,34 +1,30 @@
 
-# kelly-keating.github.io
+# My Website
 
-my cool website
+<http://kelly-keating.github.io>
 
-## how
+
+
+## how to:
 
 ### install
 
 ```
 git clone https://github.com/kelly-keating/kelly-keating.github.io
-cd 
+cd kelly-keating.github.io
 npm install
 ```
 
 ## develop
 
 ```
-npm start
+npm run dev
 ```
 
-browse to <http://localhost:9966/>.
+browse to <http://localhost:3000/>.
 
 ## test
 
 ```
 npm test
-```
-
-## deploy
-
-```
-npm run deploy
 ```
