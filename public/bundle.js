@@ -12444,7 +12444,11 @@ var Nav = function Nav() {
     _react2.default.createElement(
       'div',
       { id: 'nav-title' },
-      'Kelly Keating   \\\\ Web Developer'
+      _react2.default.createElement(
+        'h3',
+        null,
+        'Kelly Keating   \\\\ Web Developer'
+      )
     ),
     _react2.default.createElement(
       _reactRouterDom.Link,
