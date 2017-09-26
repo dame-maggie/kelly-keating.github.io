@@ -1,7 +1,3 @@
-* {
-  position: relative;
-}
-
 body {
   background-color: #2A7070;
   color: #dddddd;
@@ -67,15 +63,12 @@ h1 {
 
 .footer-container {
   display: block;
-  height: 100vh;
 }
 
 /* TITLE */
 
 .title-container {
   display: block;
-  top: 0vh;
-  height: 100vh;
   background-color: #000000;
 }
 
