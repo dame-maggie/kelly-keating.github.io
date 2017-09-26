@@ -12442,17 +12442,17 @@ var Nav = function Nav() {
     'div',
     { className: 'nav-container' },
     _react2.default.createElement(
-      'div',
-      { id: 'nav-title' },
-      _react2.default.createElement(
-        'h3',
-        null,
-        'Kelly Keating   \\\\ Web Developer'
-      )
-    ),
-    _react2.default.createElement(
       _reactRouterDom.Link,
       { to: '/' },
+      _react2.default.createElement(
+        'div',
+        { id: 'nav-title' },
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Kelly Keating   \\\\ Web Developer'
+        )
+      ),
       _react2.default.createElement('img', { id: 'nav-logo', src: 'http://i.imgur.com/2WYjdQt.jpg' })
     ),
     _react2.default.createElement(
