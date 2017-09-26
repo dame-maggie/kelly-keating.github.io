@@ -10,7 +10,11 @@ a, a:visited {
 }
 
 h1 {
+  position: relative;
+  left: 50%;
+  margin-left: -400px;
   text-align: center;
+  max-width: 800px;
   font-size: 100px;
   font-family: 'Press Start 2P', cursive;
   color: #f2f2f2;
@@ -72,11 +76,7 @@ h1 {
 .title-container {
   display: block;
   background-color: #000000;
-}
-
-#title-logo {
-  width: 100px;
-  border-radius: 50%;
+  padding-top: 100px;
 }
 
 #title-img {
@@ -94,5 +94,7 @@ h1 {
 }
 
 .project-tile {
-
+  display: inline-block;
+  width: 350px;
 }
+/* TODO: styling into component to adjust from page width */
