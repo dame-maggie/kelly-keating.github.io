@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Footer = () => (
-  <div className='footer-container'>
+  <div id='footer-container'>
     <p>LinkyLinks as a tags</p>
     <p>Github
     LinkedIn

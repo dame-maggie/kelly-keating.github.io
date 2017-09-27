@@ -1,10 +1,6 @@
-* {
-  position: relative;
-}
-
 body {
-  font-family: 'Reenie Beanie', cursive;
-  background-color: #040404;
+  background-color: #000000;
+  font-family: 'Source Code Pro', monospace;
   color: #dddddd;
 }
 
@@ -14,9 +10,20 @@ a, a:visited {
 }
 
 h1 {
+  position: relative;
+  left: 50%;
+  margin-left: -400px;
   text-align: center;
+  max-width: 800px;
   font-size: 100px;
+  font-family: 'Press Start 2P', cursive;
   color: #f2f2f2;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  margin: 40px;
 }
 
 #app {
@@ -27,67 +34,73 @@ h1 {
   width: 90%;
 }
 
-.app-container {
-  background-color: #121718;
-}
-
 /* OVERLAY */
 
-.nav-container {
+#nav-container {
   position: fixed;
   z-index: 99;
-  height: 7%;
+  height: 100px;
   width: 100%;
   top: 0px;
   margin-left: -5%;
   background-color: #000000;
 }
 
+#nav-title {
+  position: fixed;
+  left: 150px;
+}
+
 #nav-logo {
-  display: inline-flex;
-  height: 7vh;
+  position: fixed;
+  top: 10px;
+  left: 50px;
+  height: 80px;
   border-radius: 50%;
 }
 
-.nav-butt {
-  display: inline-block;
-  width: 100px;
-  height: 5vh;
-  padding: 2vh 1.5vw 0vh 1.5vw;
-  text-align: center;
-  font-size: 2em;
-  background-color: blue;
-  color: #f2f2f2;
-}
-
-.footer-container {
-  display: block;
-  height: 100vh;
+#nav-buttons {
+  position: fixed;
+  right: 100px;
 }
 
 /* TITLE */
 
-.title-container {
-  display: block;
-  top: 0vh;
-  height: 100vh;
-  background-color: #000000;
+#title-container {
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
-.title-img {
+#title-blurb {
+  margin: 50px;
+  min-height: 300px;
+}
+
+#title-img {
   width: 300px;
+  float: left;
+  padding-right: 25px;
 }
 
 /* PROJECTS */
 
-.projects-container {
-  display: block;
+#projects-container {
+  padding-bottom: 50px;
+}
+
+#tile-board {
+  text-align: center;
+}
+
+.project-tile {
+  display: inline-block;
+  width: 310px;
+  overflow: hidden;
+  padding: 20px;
+  margin: 10px;
+  background-color: #232323;
 }
 
 .proj-img {
   width: 300px;
-}
-
-.project-tile {
-
 }

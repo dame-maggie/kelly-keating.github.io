@@ -12293,11 +12293,12 @@ var App = function App() {
     null,
     _react2.default.createElement(
       'div',
-      { className: 'app-container' },
+      { id: 'app-container' },
       _react2.default.createElement(_Nav2.default, null),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Title2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Projects2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { path: '/projects', component: _Projects2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/projects', component: _Projects2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/projects/:name', component: _Projects2.default }),
       _react2.default.createElement(_Footer2.default, null)
     )
   );
@@ -12402,7 +12403,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Footer = function Footer() {
   return _react2.default.createElement(
     'div',
-    { className: 'footer-container' },
+    { id: 'footer-container' },
     _react2.default.createElement(
       'p',
       null,
@@ -12440,29 +12441,41 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Nav = function Nav() {
   return _react2.default.createElement(
     'div',
-    { className: 'nav-container' },
+    { id: 'nav-container' },
     _react2.default.createElement(
       _reactRouterDom.Link,
       { to: '/' },
-      _react2.default.createElement('img', { id: 'nav-logo', src: 'http://i.imgur.com/2WYjdQt.jpg' }),
-      'Kelly Keating'
-    ),
-    _react2.default.createElement(
-      _reactRouterDom.Link,
-      { to: '/projects' },
       _react2.default.createElement(
         'div',
-        { className: 'nav-butt' },
-        'Projects'
-      )
+        { id: 'nav-title' },
+        _react2.default.createElement(
+          'h3',
+          null,
+          'Kelly Keating   \\\\ Web Developer'
+        )
+      ),
+      _react2.default.createElement('img', { id: 'nav-logo', src: 'http://i.imgur.com/2WYjdQt.jpg' })
     ),
     _react2.default.createElement(
-      _reactRouterDom.Link,
-      { to: '/about' },
+      'div',
+      { id: 'nav-buttons' },
       _react2.default.createElement(
-        'div',
-        { className: 'nav-butt' },
-        'About'
+        _reactRouterDom.Link,
+        { to: '/projects' },
+        _react2.default.createElement(
+          'div',
+          { className: 'nav-butt' },
+          'Projects'
+        )
+      ),
+      _react2.default.createElement(
+        _reactRouterDom.Link,
+        { to: '/about' },
+        _react2.default.createElement(
+          'div',
+          { className: 'nav-butt' },
+          'About'
+        )
       )
     )
   );
@@ -12490,12 +12503,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var ProjectTile = function ProjectTile(proj) {
   return _react2.default.createElement(
     'div',
-    { className: 'project-tile' },
-    _react2.default.createElement('img', { src: proj.image, className: 'proj-img' }),
+    { className: 'project-tile', key: proj.alias },
     _react2.default.createElement(
-      'h3',
-      null,
-      proj.name
+      'a',
+      { href: proj.href },
+      _react2.default.createElement('img', { src: proj.image, className: 'proj-img' }),
+      _react2.default.createElement(
+        'h3',
+        null,
+        proj.name
+      )
     ),
     proj.blurb
   );
@@ -12514,6 +12531,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
@@ -12528,24 +12547,79 @@ var _projects2 = _interopRequireDefault(_projects);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Projects = function Projects() {
-  return _react2.default.createElement(
-    'div',
-    { className: 'projects-container' },
-    _react2.default.createElement(
-      'h2',
-      null,
-      'Projects'
-    ),
-    renderProjTiles()
-  );
-}; //projects page ? list : tiles
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var renderProjTiles = function renderProjTiles() {
-  return _projects2.default.map(function (proj) {
-    return (0, _ProjectTile2.default)(proj);
-  });
-};
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Projects = function (_React$Component) {
+  _inherits(Projects, _React$Component);
+
+  function Projects(props) {
+    _classCallCheck(this, Projects);
+
+    var _this = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this, props));
+
+    _this.state = {
+      proj: props.match.params.name
+    };
+    return _this;
+  }
+
+  _createClass(Projects, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      this.setState({
+        proj: nextProps.match.params.name
+      });
+    }
+  }, {
+    key: 'renderProjTiles',
+    value: function renderProjTiles() {
+      return _projects2.default.map(function (proj) {
+        return (0, _ProjectTile2.default)(proj);
+      });
+    }
+  }, {
+    key: 'renderTileboard',
+    value: function renderTileboard() {
+      return _react2.default.createElement(
+        'div',
+        { id: 'projects-container' },
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Projects'
+        ),
+        _react2.default.createElement(
+          'div',
+          { id: 'tile-board' },
+          this.renderProjTiles()
+        )
+      );
+    }
+  }, {
+    key: 'renderProj',
+    value: function renderProj(proj) {
+      return _react2.default.createElement(
+        'div',
+        null,
+        proj
+      );
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      if (this.state.proj) {
+        return this.renderProj(this.state.proj);
+      }
+      return this.renderTileboard();
+    }
+  }]);
+
+  return Projects;
+}(_react2.default.Component);
 
 exports.default = Projects;
 
@@ -12569,14 +12643,32 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Title = function Title() {
   return _react2.default.createElement(
     'div',
-    { className: 'title-container' },
-    _react2.default.createElement('img', { src: 'http://i.imgur.com/NjcGgJi.jpg', className: 'title-img' }),
+    { id: 'title-container' },
     _react2.default.createElement(
       'h1',
       null,
       'Kelly Keating'
     ),
-    '// My skills'
+    _react2.default.createElement(
+      'p',
+      null,
+      'I am a recent graduate of Enspiral Dev Academy, Javascript coder, maker of websites, and creator of games such as The Gitmaster and PurrPolice.'
+    ),
+    _react2.default.createElement(
+      'div',
+      { id: 'title-blurb' },
+      _react2.default.createElement('img', { src: 'https://imgur.com/S2NvY74.jpg', id: 'title-img' }),
+      _react2.default.createElement(
+        'div',
+        { id: 'blurb-text' },
+        _react2.default.createElement(
+          'p',
+          null,
+          'My love of code and creating interactions came from an enthusiasm for puzzles. I love trying to work my way around a problem, finding simple solutions in complex systems, and being able to produce something awesome at the end of it.'
+        ),
+        '// My skills'
+      )
+    )
   );
 };
 
@@ -12633,7 +12725,7 @@ document.addEventListener('DOMContentLoaded', function () {
 "use strict";
 
 
-module.exports = [{ name: 'The Gitmaster', blurb: 'We made a game.', image: 'http://i.imgur.com/2WYjdQt.jpg' }, { name: 'EDA cheatsheet', blurb: 'Toggle!', image: 'http://i.imgur.com/2WYjdQt.jpg' }, { name: 'CLOCK', blurb: 'Tells the time.', image: 'http://i.imgur.com/2WYjdQt.jpg' }];
+module.exports = [{ name: 'The Gitmaster', alias: 'gitmaster', blurb: 'We made a game.', href: 'https://thegitmaster.herokuapp.com/', image: 'https://imgur.com/MuCW4BM.jpg' }, { name: 'EDA cheatsheet', alias: 'cheatsheet', blurb: 'Toggle!', href: 'https://eda-cheatsheet.herokuapp.com/', image: 'https://imgur.com/DIi6DOB.jpg' }, { name: 'CLOCK', alias: 'clock', blurb: 'Tells the time.', image: 'http://i.imgur.com/2WYjdQt.jpg' }, { name: 'Jukebox', alias: 'jukebox', blurb: 'Can search and create playlists.', image: 'http://i.imgur.com/2WYjdQt.jpg' }, { name: 'KanyeRest', alias: 'kanye', blurb: 'Simple use of a RESTful API.', image: 'http://i.imgur.com/2WYjdQt.jpg' }, { name: 'Calculator', alias: 'calculator', blurb: 'Numbery buttons.', image: 'http://i.imgur.com/2WYjdQt.jpg' }, { name: 'Minesweeper', alias: 'minesweeper', blurb: 'Simple version of the game.', image: 'http://i.imgur.com/2WYjdQt.jpg' }, { name: 'Tic Tac Toe', alias: 'tictactoe', blurb: 'Classic.', image: 'http://i.imgur.com/2WYjdQt.jpg' }];
 
 /***/ }),
 /* 121 */
