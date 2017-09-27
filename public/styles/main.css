@@ -20,6 +20,12 @@ h1 {
   color: #f2f2f2;
 }
 
+h2 {
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  margin: 40px;
+}
+
 #app {
   position: absolute;
   top: 0px;
@@ -76,6 +82,7 @@ h1 {
   display: block;
   background-color: #000000;
   padding-top: 100px;
+  padding-bottom: 50px;
 }
 
 #title-img {
@@ -86,18 +93,22 @@ h1 {
 
 #projects-container {
   display: block;
-}
-
-.proj-img {
-  width: 300px;
-}
-
-.project-tile {
-  display: inline-block;
-  width: 350px;
-  overflow: hidden;
+  padding-bottom: 50px;
 }
 
 #tile-board {
   text-align: center;
+}
+
+.project-tile {
+  display: inline-block;
+  width: 310px;
+  overflow: hidden;
+  padding: 20px;
+  border: solid 1px white;
+  margin: 10px;
+}
+
+.proj-img {
+  width: 300px;
 }
