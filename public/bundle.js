@@ -12657,7 +12657,7 @@ var Title = function Title() {
     _react2.default.createElement(
       'div',
       { id: 'title-blurb' },
-      _react2.default.createElement('img', { src: 'http://i.imgur.com/NjcGgJi.jpg', id: 'title-img' }),
+      _react2.default.createElement('img', { src: 'https://imgur.com/S2NvY74.jpg', id: 'title-img' }),
       _react2.default.createElement(
         'div',
         { id: 'blurb-text' },
