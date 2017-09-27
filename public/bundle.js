@@ -12297,7 +12297,8 @@ var App = function App() {
       _react2.default.createElement(_Nav2.default, null),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Title2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Projects2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { path: '/projects', component: _Projects2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/projects', component: _Projects2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/projects/:name', component: _Projects2.default }),
       _react2.default.createElement(_Footer2.default, null)
     )
   );
@@ -12502,7 +12503,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var ProjectTile = function ProjectTile(proj) {
   return _react2.default.createElement(
     'div',
-    { className: 'project-tile' },
+    { className: 'project-tile', key: proj.alias },
     _react2.default.createElement('img', { src: proj.image, className: 'proj-img' }),
     _react2.default.createElement(
       'h3',
@@ -12526,6 +12527,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
@@ -12540,28 +12543,79 @@ var _projects2 = _interopRequireDefault(_projects);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Projects = function Projects() {
-  return _react2.default.createElement(
-    'div',
-    { id: 'projects-container' },
-    _react2.default.createElement(
-      'h2',
-      null,
-      'Projects'
-    ),
-    _react2.default.createElement(
-      'div',
-      { id: 'tile-board' },
-      renderProjTiles()
-    )
-  );
-}; //projects page ? list : tiles
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var renderProjTiles = function renderProjTiles() {
-  return _projects2.default.map(function (proj) {
-    return (0, _ProjectTile2.default)(proj);
-  });
-};
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Projects = function (_React$Component) {
+  _inherits(Projects, _React$Component);
+
+  function Projects(props) {
+    _classCallCheck(this, Projects);
+
+    var _this = _possibleConstructorReturn(this, (Projects.__proto__ || Object.getPrototypeOf(Projects)).call(this, props));
+
+    _this.state = {
+      proj: props.match.params.name
+    };
+    return _this;
+  }
+
+  _createClass(Projects, [{
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      this.setState({
+        proj: nextProps.match.params.name
+      });
+    }
+  }, {
+    key: 'renderProjTiles',
+    value: function renderProjTiles() {
+      return _projects2.default.map(function (proj) {
+        return (0, _ProjectTile2.default)(proj);
+      });
+    }
+  }, {
+    key: 'renderTileboard',
+    value: function renderTileboard() {
+      return _react2.default.createElement(
+        'div',
+        { id: 'projects-container' },
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Projects'
+        ),
+        _react2.default.createElement(
+          'div',
+          { id: 'tile-board' },
+          this.renderProjTiles()
+        )
+      );
+    }
+  }, {
+    key: 'renderProj',
+    value: function renderProj(proj) {
+      return _react2.default.createElement(
+        'div',
+        null,
+        proj
+      );
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      if (this.state.proj) {
+        return this.renderProj(this.state.proj);
+      }
+      return this.renderTileboard();
+    }
+  }]);
+
+  return Projects;
+}(_react2.default.Component);
 
 exports.default = Projects;
 

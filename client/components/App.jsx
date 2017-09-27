@@ -12,7 +12,8 @@ const App = () => (
       <Nav />
       <Route exact path='/' component={Title} />
       <Route exact path='/' component={Projects} />
-      <Route path='/projects' component={Projects} />
+      <Route exact path='/projects' component={Projects} />
+      <Route exact path='/projects/:name' component={Projects} />
       <Footer />
     </div>
   </Router>
