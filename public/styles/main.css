@@ -34,10 +34,6 @@ h2 {
   width: 90%;
 }
 
-#app-container {
-  background-color: #121718;
-}
-
 /* OVERLAY */
 
 #nav-container {
@@ -80,7 +76,6 @@ h2 {
 
 #title-container {
   display: block;
-  background-color: #000000;
   padding-top: 100px;
   padding-bottom: 50px;
 }
@@ -105,8 +100,8 @@ h2 {
   width: 310px;
   overflow: hidden;
   padding: 20px;
-  border: solid 1px white;
   margin: 10px;
+  background-color: #232323;
 }
 
 .proj-img {
