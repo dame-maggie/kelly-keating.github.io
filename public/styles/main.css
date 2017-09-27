@@ -28,13 +28,13 @@ h1 {
   width: 90%;
 }
 
-.app-container {
+#app-container {
   background-color: #121718;
 }
 
 /* OVERLAY */
 
-.nav-container {
+#nav-container {
   position: fixed;
   z-index: 99;
   height: 100px;
@@ -66,13 +66,13 @@ h1 {
 
 }
 
-.footer-container {
+#footer-container {
   display: block;
 }
 
 /* TITLE */
 
-.title-container {
+#title-container {
   display: block;
   background-color: #000000;
   padding-top: 100px;
@@ -84,7 +84,7 @@ h1 {
 
 /* PROJECTS */
 
-.projects-container {
+#projects-container {
   display: block;
 }
 
@@ -95,5 +95,9 @@ h1 {
 .project-tile {
   display: inline-block;
   width: 350px;
+  overflow: hidden;
 }
-/* TODO: styling into component to adjust from page width */
+
+#tile-board {
+  text-align: center;
+}

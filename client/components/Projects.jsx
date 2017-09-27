@@ -4,9 +4,11 @@ import Tile from './ProjectTile'
 import projData from '../../public/data/projects'
 
 const Projects = () => (
-  <div className='projects-container'>
+  <div id='projects-container'>
     <h2>Projects</h2>
-    {renderProjTiles()}
+    <div id='tile-board'>
+      {renderProjTiles()}
+    </div>
   </div>
 ) //projects page ? list : tiles
 

@@ -12293,7 +12293,7 @@ var App = function App() {
     null,
     _react2.default.createElement(
       'div',
-      { className: 'app-container' },
+      { id: 'app-container' },
       _react2.default.createElement(_Nav2.default, null),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Title2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Projects2.default }),
@@ -12402,7 +12402,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Footer = function Footer() {
   return _react2.default.createElement(
     'div',
-    { className: 'footer-container' },
+    { id: 'footer-container' },
     _react2.default.createElement(
       'p',
       null,
@@ -12440,7 +12440,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Nav = function Nav() {
   return _react2.default.createElement(
     'div',
-    { className: 'nav-container' },
+    { id: 'nav-container' },
     _react2.default.createElement(
       _reactRouterDom.Link,
       { to: '/' },
@@ -12543,13 +12543,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Projects = function Projects() {
   return _react2.default.createElement(
     'div',
-    { className: 'projects-container' },
+    { id: 'projects-container' },
     _react2.default.createElement(
       'h2',
       null,
       'Projects'
     ),
-    renderProjTiles()
+    _react2.default.createElement(
+      'div',
+      { id: 'tile-board' },
+      renderProjTiles()
+    )
   );
 }; //projects page ? list : tiles
 
@@ -12581,7 +12585,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Title = function Title() {
   return _react2.default.createElement(
     'div',
-    { className: 'title-container' },
+    { id: 'title-container' },
     _react2.default.createElement(
       'h1',
       null,
