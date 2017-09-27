@@ -1,5 +1,5 @@
 body {
-  background-color: #2A7070;
+  background-color: #000000;
   font-family: 'Source Code Pro', monospace;
   color: #dddddd;
 }
@@ -74,8 +74,6 @@ h1 {
 
 .title-container {
   display: block;
-  width: 100%;
-  margin-left: -5vw;
   background-color: #000000;
   padding-top: 100px;
 }
