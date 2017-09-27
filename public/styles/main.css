@@ -64,14 +64,6 @@ h2 {
   right: 100px;
 }
 
-.nav-butt {
-
-}
-
-#footer-container {
-
-}
-
 /* TITLE */
 
 #title-container {
@@ -81,10 +73,13 @@ h2 {
 
 #title-blurb {
   margin: 50px;
+  min-height: 460px;
 }
 
 #title-img {
   width: 300px;
+  float: left;
+  padding-right: 25px;
 }
 
 /* PROJECTS */
