@@ -69,15 +69,18 @@ h2 {
 }
 
 #footer-container {
-  display: block;
+
 }
 
 /* TITLE */
 
 #title-container {
-  display: block;
   padding-top: 100px;
   padding-bottom: 50px;
+}
+
+#title-blurb {
+  margin: 50px;
 }
 
 #title-img {
@@ -87,7 +90,6 @@ h2 {
 /* PROJECTS */
 
 #projects-container {
-  display: block;
   padding-bottom: 50px;
 }
 

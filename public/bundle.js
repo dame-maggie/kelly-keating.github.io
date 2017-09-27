@@ -12597,12 +12597,16 @@ var Title = function Title() {
       'I am a recent graduate of Enspiral Dev Academy, Javascript coder, maker of websites, and creator of games such as The Gitmaster and PurrPolice.'
     ),
     _react2.default.createElement(
-      'p',
-      null,
-      'My love of code and creating interactions came from an enthusiasm for puzzles. I love trying to work my way around a problem, finding simple solutions in complex systems, and being able to produce something awesome at the end of it.'
-    ),
-    _react2.default.createElement('img', { src: 'http://i.imgur.com/NjcGgJi.jpg', id: 'title-img' }),
-    '// My skills'
+      'div',
+      { id: 'title-blurb' },
+      _react2.default.createElement('img', { src: 'http://i.imgur.com/NjcGgJi.jpg', id: 'title-img' }),
+      _react2.default.createElement(
+        'p',
+        null,
+        'My love of code and creating interactions came from an enthusiasm for puzzles. I love trying to work my way around a problem, finding simple solutions in complex systems, and being able to produce something awesome at the end of it.'
+      ),
+      '// My skills'
+    )
   );
 };
 
