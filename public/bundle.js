@@ -12465,7 +12465,11 @@ var Nav = function Nav() {
         _react2.default.createElement(
           'div',
           { className: 'nav-butt' },
-          'Projects'
+          _react2.default.createElement(
+            'h5',
+            null,
+            'Projects'
+          )
         )
       ),
       _react2.default.createElement(
@@ -12474,7 +12478,11 @@ var Nav = function Nav() {
         _react2.default.createElement(
           'div',
           { className: 'nav-butt' },
-          'About'
+          _react2.default.createElement(
+            'h5',
+            null,
+            'About'
+          )
         )
       )
     )
