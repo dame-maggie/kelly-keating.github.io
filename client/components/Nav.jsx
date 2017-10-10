@@ -9,8 +9,8 @@ const Nav = () => (
       <img id='nav-logo' src='http://i.imgur.com/2WYjdQt.jpg'/>
     </Link>
     <div id='nav-buttons'>
-      <Link to='/projects'><div className='nav-butt'>Projects</div></Link>
-      <Link to='/about'><div className='nav-butt'>About</div></Link>
+      <Link to='/projects'><div className='nav-butt'><h5>Projects</h5></div></Link>
+      <Link to='/about'><div className='nav-butt'><h5>About</h5></div></Link>
     </div>
   </div>
 )
