@@ -5,7 +5,7 @@ module.exports = [
   {name: 'Jukebox', alias: 'jukebox', blurb:'Can search and create playlists.', image:'http://i.imgur.com/2WYjdQt.jpg'},
   {name: 'KanyeRest', alias: 'kanye', blurb:'Simple use of a RESTful API.', image:'http://i.imgur.com/8IBUiAz.jpg'},
   {name: 'Calculator', alias: 'calculator', blurb:'Numbery buttons.', href:'https://codepen.io/kelly-keating/full/MmWyYp', image:'http://i.imgur.com/qgurwBo.jpg'},
-  {name: 'Minesweeper', alias: 'minesweeper', blurb:'Simple version of the game.', image:'http://i.imgur.com/2WYjdQt.jpg'},
+  {name: 'Minesweeper', alias: 'minesweeper', blurb:'Simple version of the game.', href:'https://kelly-keating.github.io/minesweeper/', image:'http://i.imgur.com/zUKEtGR.jpg'},
   {name: 'Tic Tac Toe', alias: 'tictactoe', blurb:'Classic.', image:'http://i.imgur.com/2WYjdQt.jpg'},
   {name: 'Te Reo Proverb Generator', alias: 'tereo', blurb:'An early project with some proverbs.', href:'https://codepen.io/kelly-keating/full/KWLQEY', image:'http://i.imgur.com/Fr4dQr4.jpg'}
 ]
