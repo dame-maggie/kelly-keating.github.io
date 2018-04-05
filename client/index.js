@@ -15,7 +15,7 @@ import App from './components/App'
 document.addEventListener('DOMContentLoaded', () => {
   render(
     // <Provider store={store}>
-      <App />,//comma added
+      <App />,//comma added here instead
     // </Provider>,
     document.getElementById('app')
   )
